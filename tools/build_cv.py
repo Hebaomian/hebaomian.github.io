@@ -102,9 +102,16 @@ entry('Sun Yat-sen University', 'Sep 2017 - Jun 2021',
       "Bachelor's degree in Computational Materials", 'School of Materials, Guangzhou, China')
 
 section('Work Experience')
-entry('Alibaba Holding', 'Aug 3, 2026 - Present', 'Alibaba Group Holding Limited')
+entry('Alibaba Holding', 'Aug 3, 2026 - Present', 'Large Language Model Algorithm Engineer')
+for text in [
+    '<b>Post-training:</b> Research on OPD for large language model post-training.',
+    '<b>Code agents:</b> Synthetic data generation for code agents.',
+    '<b>RSI:</b> Research on agent self-improvement.',
+    '<b>Multimodal agents:</b> Research on agents that process and interact across modalities.',
+]:
+    add('• '+text, 'bullet')
 story.append(Spacer(1,7))
-entry('Alibaba International', 'Jul 2024 - Jul 3, 2026', 'LLM Agents &amp; Reinforcement Learning')
+entry('Alibaba International', 'Jul 2024 - Jul 3, 2026', 'Large Language Model Algorithm Engineer')
 for text in [
     '<b>Customer service agents:</b> Contributed to AliExpress pre-sales and after-sales agents, including planner-reasoner architectures, tool calling, reward evaluation, and alignment with DPO and GRPO.',
     '<b>Multimodal review:</b> Worked on image-based review with multimodal models, OCR, image classification, and preference alignment.',
@@ -156,7 +163,7 @@ add('<b>Programming and frameworks:</b> Python, verl.<br/>'
     '<b>Languages:</b> English (CET-6, CET-4).')
 
 section('Research Interests')
-add('My research focuses on <b>large language model agents and reinforcement learning</b>, particularly learning from multi-turn interactions, preference alignment, reasoning, and tool use.')
+add('My research focuses on <b>large language model post-training and agents</b>, including OPD, synthetic data generation for code agents, RSI-based self-improvement, and multimodal agents.')
 for text in [
     '<b>Agentic reinforcement learning:</b> Multi-turn preference learning, turn-level credit assignment, and alignment for LLM agents.',
     '<b>Natural language processing:</b> Source-free domain adaptation for question answering and aspect-based sentiment analysis.',
