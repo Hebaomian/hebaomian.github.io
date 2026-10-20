@@ -86,13 +86,18 @@ main { padding: 24px 49px 0; }
 .publication-group { background: var(--surface); padding: 15px 23px 5px; margin-top: 18px; }
 .publication-group:first-child { margin-top: 0; }
 .publication-group > h3 { font: 500 21px/1.2 var(--heading); margin-bottom: 3px; }
-.publication { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 18px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.publication { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 20px; padding: 20px 0; border-bottom: 1px solid var(--line); }
 .publication:last-child { border-bottom: 0; }
 .publication[hidden], .publication-group[hidden] { display: none; }
 .publication-meta { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; padding-top: 3px; }
 .venue-badge { display: inline-block; background: var(--accent); color: #fff; font-size: 11px; line-height: 1.5; padding: 3px 7px; border-radius: 3px; }
 .venue-badge.preprint { background: #81738f; }
 .paper-year { font-size: 12px; color: var(--muted); padding-left: 1px; }
+.paper-thumbnail { display: block; width: 100%; margin-top: 3px; color: var(--muted); }
+.paper-thumbnail img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: contain; padding: 6px; background: #fff; border: 1px solid var(--line); border-radius: 3px; }
+.paper-thumbnail span { display: block; margin-top: 4px; font-size: 11px; line-height: 1.4; text-align: center; }
+.paper-thumbnail:hover { text-decoration: none; }
+.paper-thumbnail:hover img { border-color: #a58bbb; }
 .publication h4 { font: 600 16px/1.4 var(--font); margin-bottom: 5px; }
 .publication h4 a { color: var(--ink); }
 .publication h4 a:hover { color: var(--accent); }
@@ -176,7 +181,10 @@ footer > a { white-space: nowrap; }
   .page-section { margin-top: 30px; }
   .publication-group { padding: 15px 18px 3px; }
   .publication { grid-template-columns: 1fr; gap: 8px; padding: 17px 0; }
-  .publication-meta { flex-direction: row; align-items: center; gap: 10px; padding: 0; }
+  .publication-meta { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 8px 10px; padding: 0; }
+  .paper-thumbnail { flex-basis: 100%; margin: 2px 0 4px; }
+  .paper-thumbnail img { width: min(260px, 100%); margin: auto; }
+  .paper-thumbnail span { text-align: center; }
   .paper-year { padding: 0; }
   .entry-heading { flex-direction: column; gap: 5px; }
   .entry-heading h3 { font-size: 20px; }

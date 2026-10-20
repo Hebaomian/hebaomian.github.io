@@ -4,7 +4,11 @@
   const papers = window.PUBLICATIONS || [];
   const escape = value => String(value).replace(/[&<>"']/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[char]));
   const renderPaper = paper => `<article class="publication" data-topic="${paper.topic}" id="paper-${paper.id}">
-    <div class="publication-meta"><span class="venue-badge ${paper.group === "Preprints" ? "preprint" : ""}">${escape(paper.badge)}</span><span class="paper-year">${paper.year}</span></div>
+    <div class="publication-meta">
+      <span class="venue-badge ${paper.group === "Preprints" ? "preprint" : ""}">${escape(paper.badge)}</span>
+      <span class="paper-year">${paper.year}</span>
+      ${paper.figure ? `<a class="paper-thumbnail" href="${escape(paper.figure)}" target="_blank" rel="noopener" aria-label="View full figure from ${escape(paper.title)}"><img src="${escape(paper.figure)}" alt="${escape(paper.figureAlt)}" width="${paper.figureWidth}" height="${paper.figureHeight}" loading="lazy" decoding="async"><span>View figure ↗</span></a>` : ""}
+    </div>
     <div class="publication-content">
       <h4><a href="${escape(paper.url)}" target="_blank" rel="noopener">${escape(paper.title)}</a></h4>
       <p class="authors">${paper.authors.map(name => name === "Zishuo Zhao" ? `<strong>${name}</strong>` : escape(name)).join(", ")}</p>

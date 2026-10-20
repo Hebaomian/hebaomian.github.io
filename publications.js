@@ -1,6 +1,9 @@
 window.PUBLICATIONS = [
   {
     id: "tlm-dre", group: "Preprints", topic: "agents", year: 2026, badge: "arXiv '26", visual: "tlm-DRE",
+    figure: "assets/publications/tlm-dre.png",
+    figureAlt: "Figure 1: overall architecture of tlm-DRE in a single training iteration.",
+    figureWidth: 1000, figureHeight: 585,
     title: "Turn-level Multiscale Density Ratio Estimation for LLM Agents",
     authors: ["Zishuo Zhao", "Kai Chen", "Ao Li", "Yuan Liu"],
     venue: "arXiv:2609.16760, 2026",
@@ -10,6 +13,9 @@ window.PUBLICATIONS = [
   },
   {
     id: "flex-clip", group: "Preprints", topic: "multimodal", year: 2024, badge: "arXiv '24", visual: "FLEX-CLIP",
+    figure: "assets/publications/flex-clip.png",
+    figureAlt: "Figure 3: FLEX-CLIP feature extraction, multimodal feature synthesis, and common space projection.",
+    figureWidth: 1000, figureHeight: 412,
     title: "FLEX-CLIP: Feature-Level GEneration Network Enhanced CLIP for X-shot Cross-modal Retrieval",
     authors: ["Jingyou Xie", "Jiayi Kuang", "Zhenzhou Lin", "Jiarui Ouyang", "Zishuo Zhao", "Ying Shen"],
     venue: "arXiv:2411.17454, 2024",
@@ -19,6 +25,9 @@ window.PUBLICATIONS = [
   },
   {
     id: "sf-absa", group: "Conference Papers", topic: "nlp", year: 2024, badge: "LREC-COLING '24", visual: "SF-ABSA",
+    figure: "assets/publications/sf-absa.png",
+    figureAlt: "Figure 2: overview of the SF-ABSA framework for source-free domain adaptation.",
+    figureWidth: 1000, figureHeight: 390,
     title: "Source-free Domain Adaptation for Aspect-based Sentiment Analysis",
     authors: ["Zishuo Zhao", "Ziyang Ma", "Zhenzhou Lin", "Jingyou Xie", "Yinghui Li", "Ying Shen"],
     venue: "LREC-COLING 2024, pp. 15076–15086",
