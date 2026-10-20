@@ -2,6 +2,7 @@ window.PUBLICATIONS = [
   {
     id: "tlm-dre", group: "Preprints", topic: "agents", year: 2026, badge: "arXiv '26", visual: "tlm-DRE",
     figure: "assets/publications/tlm-dre.png",
+    figureThumbnail: "assets/publications/tlm-dre-thumb.webp",
     figureAlt: "Figure 1: overall architecture of tlm-DRE in a single training iteration.",
     figureWidth: 1000, figureHeight: 585,
     title: "Turn-level Multiscale Density Ratio Estimation for LLM Agents",
@@ -14,6 +15,7 @@ window.PUBLICATIONS = [
   {
     id: "flex-clip", group: "Preprints", topic: "multimodal", year: 2024, badge: "arXiv '24", visual: "FLEX-CLIP",
     figure: "assets/publications/flex-clip.png",
+    figureThumbnail: "assets/publications/flex-clip-thumb.webp",
     figureAlt: "Figure 3: FLEX-CLIP feature extraction, multimodal feature synthesis, and common space projection.",
     figureWidth: 1000, figureHeight: 412,
     title: "FLEX-CLIP: Feature-Level GEneration Network Enhanced CLIP for X-shot Cross-modal Retrieval",
@@ -26,6 +28,7 @@ window.PUBLICATIONS = [
   {
     id: "sf-absa", group: "Conference Papers", topic: "nlp", year: 2024, badge: "LREC-COLING '24", visual: "SF-ABSA",
     figure: "assets/publications/sf-absa.png",
+    figureThumbnail: "assets/publications/sf-absa-thumb.webp",
     figureAlt: "Figure 2: overview of the SF-ABSA framework for source-free domain adaptation.",
     figureWidth: 1000, figureHeight: 390,
     title: "Source-free Domain Adaptation for Aspect-based Sentiment Analysis",
@@ -37,6 +40,10 @@ window.PUBLICATIONS = [
   },
   {
     id: "sf-qa", group: "Conference Papers", topic: "nlp", year: 2023, badge: "ICASSP '23", visual: "SF-QA",
+    figure: "assets/publications/sf-qa.png",
+    figureThumbnail: "assets/publications/sf-qa-thumb.webp",
+    figureAlt: "Source-free question answering framework with question generation, target-model adaptation, and source-model transfer.",
+    figureWidth: 944, figureHeight: 490,
     title: "Source-Free Unsupervised Domain Adaptation for Question Answering",
     authors: ["Zishuo Zhao", "Yuexiang Xie", "Jingyou Xie", "Zhenzhou Lin", "Yaliang Li", "Ying Shen"],
     venue: "IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2023",
@@ -46,6 +53,10 @@ window.PUBLICATIONS = [
   },
   {
     id: "htens", group: "Conference Papers", topic: "knowledge", year: 2023, badge: "SIGIR '23", visual: "HTENS",
+    figure: "assets/publications/htens.png",
+    figureThumbnail: "assets/publications/htens-thumb.webp",
+    figureAlt: "Overview of HTENS: a hierarchical-type-aware sampler selects negative triples for a knowledge graph embedding model.",
+    figureWidth: 722, figureHeight: 522,
     title: "Hierarchical Type Enhanced Negative Sampling for Knowledge Graph Embedding",
     authors: ["Zhenzhou Lin", "Zishuo Zhao", "Jingyou Xie", "Ying Shen"],
     venue: "ACM SIGIR 2023, pp. 2047–2051",
@@ -55,6 +66,10 @@ window.PUBLICATIONS = [
   },
   {
     id: "mgl", group: "Conference Papers", topic: "multimodal", year: 2023, badge: "SDM '23", visual: "MGL",
+    figure: "assets/publications/mgl.png",
+    figureThumbnail: "assets/publications/mgl-thumb.webp",
+    figureAlt: "Multimodal graph framework combining image and text representations, graph reasoning, and global embedding enhancement.",
+    figureWidth: 802, figureHeight: 430,
     title: "Multimodal Graph Learning for Cross-Modal Retrieval",
     authors: ["Jingyou Xie", "Zishuo Zhao", "Zhenzhou Lin", "Ying Shen"],
     venue: "SIAM International Conference on Data Mining (SDM), 2023, pp. 145–153",

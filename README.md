@@ -9,7 +9,7 @@ An English academic homepage for Zishuo Zhao, built with plain HTML, CSS, and Ja
 - `site.js`: publication filters, expandable summaries and citations, and mobile navigation.
 - `style.css`: responsive layout, accessibility states, and print styles.
 - `assets/CV.pdf`: public English CV. The original private resume is not included.
-- `assets/publications/`: figures cropped from the corresponding papers, with source and figure references in `SOURCES.md`.
+- `assets/publications/`: paper figures and lightweight WebP thumbnails, with source and figure references in `SOURCES.md`.
 - `tools/build_cv.py`: generates the public English CV with ReportLab and embedded CMU Serif fonts.
 - `assets/fonts/cmu/`: Computer Modern Unicode font files, OFL license, and provenance.
 - `.nojekyll`: serves the files directly through GitHub Pages.
@@ -34,7 +34,7 @@ The live address is `https://zishuo-zhao.github.io/`. Changes to `main` are publ
 
 Edit text in `index.html` and paper records in `publications.js`. New publication records must have a unique `id`, a `group`, and a supported `topic` (`agents`, `nlp`, `multimodal`, or `knowledge`). Keep preprints distinct from accepted conference papers.
 
-Optional paper thumbnails use `figure`, `figureAlt`, `figureWidth`, and `figureHeight`. Use an actual figure from the corresponding paper, preserve its full diagram, and record its source. The thumbnail opens the full-size image; paper title and PDF links continue to open the publication.
+Optional paper figures use `figure` for the full PNG, `figureThumbnail` for the 520-pixel-wide WebP preview, and `figureAlt`, `figureWidth`, and `figureHeight` for the accessible description and original dimensions. Use an actual figure from the corresponding paper, preserve its full diagram, and record its source. List previews load lazily; the full PNG loads when the visitor selects its thumbnail. Paper title and PDF links continue to open the publication.
 
 To regenerate the CV with ReportLab installed:
 

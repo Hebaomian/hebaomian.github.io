@@ -7,7 +7,7 @@
     <div class="publication-meta">
       <span class="venue-badge ${paper.group === "Preprints" ? "preprint" : ""}">${escape(paper.badge)}</span>
       <span class="paper-year">${paper.year}</span>
-      ${paper.figure ? `<a class="paper-thumbnail" href="${escape(paper.figure)}" target="_blank" rel="noopener" aria-label="View full figure from ${escape(paper.title)}"><img src="${escape(paper.figure)}" alt="${escape(paper.figureAlt)}" width="${paper.figureWidth}" height="${paper.figureHeight}" loading="lazy" decoding="async"><span>View figure ↗</span></a>` : ""}
+      ${paper.figure ? `<a class="paper-thumbnail" href="${escape(paper.figure)}" target="_blank" rel="noopener" aria-label="View full figure from ${escape(paper.title)}"><img src="${escape(paper.figureThumbnail || paper.figure)}" alt="${escape(paper.figureAlt)}" width="${paper.figureWidth}" height="${paper.figureHeight}" loading="lazy" decoding="async"><span>View figure ↗</span></a>` : ""}
     </div>
     <div class="publication-content">
       <h4><a href="${escape(paper.url)}" target="_blank" rel="noopener">${escape(paper.title)}</a></h4>
