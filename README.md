@@ -44,3 +44,5 @@ The public CV includes contact details supplied by its owner and omits internal 
 ## Typography
 
 The homepage follows the reference site's Gill Sans body type (16px, 1.6 line height), system sans headings, and centered layout. Gill Sans is used when installed; Gill Sans MT, Calibri, and the browser sans-serif provide fallbacks. No proprietary font is redistributed. The CV uses embedded CMU Serif, a Computer Modern Unicode family released under OFL 1.1, with black section rules and right-aligned dates.
+
+The browser title is `Home - Zishuo ZHAO`. The opening biography and profile form two columns on desktop, followed by full-width news and publication sections. Publication groups use a subtle background and compact venue-label columns. Work project labels remain unbolded, and school names take priority over degree subjects. On narrow screens the layout stacks into a single reading column.

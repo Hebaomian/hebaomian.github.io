@@ -3,11 +3,9 @@
   const list = document.querySelector("#publication-list");
   const papers = window.PUBLICATIONS || [];
   const escape = value => String(value).replace(/[&<>"']/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[char]));
-  const decorativeFigure = paper => `<div class="publication-visual" aria-hidden="true"><svg viewBox="0 0 112 95"><path d="M0 70 112 25M0 85 112 40M0 55 112 10" fill="none" stroke="#ded3e8" stroke-width="1"/><circle cx="97" cy="10" r="33" fill="none" stroke="#d2c0df"/><circle cx="10" cy="91" r="28" fill="none" stroke="#d2c0df"/></svg><span class="figure-label">${escape(paper.visual)}</span><span class="figure-bottom">${escape(paper.topic === "agents" ? "multi-turn alignment" : paper.topic === "nlp" ? "domain adaptation" : paper.topic === "knowledge" ? "knowledge graphs" : "cross-modal learning")}</span></div>`;
   const renderPaper = paper => `<article class="publication" data-topic="${paper.topic}" id="paper-${paper.id}">
-    ${decorativeFigure(paper)}
+    <div class="publication-meta"><span class="venue-badge ${paper.group === "Preprints" ? "preprint" : ""}">${escape(paper.badge)}</span><span class="paper-year">${paper.year}</span></div>
     <div class="publication-content">
-      <div class="publication-header"><span class="venue-badge ${paper.group === "Preprints" ? "preprint" : ""}">${escape(paper.badge)}</span><span class="paper-year">${paper.year}</span></div>
       <h4><a href="${escape(paper.url)}" target="_blank" rel="noopener">${escape(paper.title)}</a></h4>
       <p class="authors">${paper.authors.map(name => name === "Zishuo Zhao" ? `<strong>${name}</strong>` : escape(name)).join(", ")}</p>
       <p class="paper-venue">${escape(paper.venue)}</p>
