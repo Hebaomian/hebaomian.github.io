@@ -104,13 +104,12 @@ entry('Sun Yat-sen University', 'Sep 2017 - Jun 2021',
 section('Work Experience')
 entry('Alibaba Holding', 'Aug 3, 2026 - Present', 'Large Language Model Algorithm Engineer')
 for text in [
-    '<b>Post-training:</b> Research on OPD for large language model post-training.',
-    '<b>Code agents:</b> Synthetic data generation for code agents.',
-    '<b>RSI:</b> Research on agent self-improvement.',
-    '<b>Multimodal agents:</b> Research on agents that process and interact across modalities.',
+    '<b>Code Agent Data Synthesis:</b> Develop synthetic training data for code agents, focusing on Terminal-Bench 3.0, machine learning, and scientific tasks. Work on task-oriented data and agent interaction trajectories to support coding, experimentation, and problem solving across these domains.',
+    '<b>Multimodal Agent Training:</b> Train multimodal models as agents, covering reflection, OPD, tool calling, and revisiting prior observations. Work on reinforcement learning for multimodal agent tasks that combine perception, reasoning, and interaction across multiple steps.',
+    "<b>Research on Agent Learning:</b> Investigate Claude's reasoning trajectories through probing and reverse engineering. Explore knowledge distillation, OPD, RSI-based self-improvement, and agentic reinforcement learning, with a focus on reasoning transfer and iterative agent improvement.",
 ]:
     add('• '+text, 'bullet')
-story.append(Spacer(1,7))
+story.append(Spacer(1,3))
 entry('Alibaba International', 'Jul 2024 - Jul 3, 2026', 'Large Language Model Algorithm Engineer')
 for text in [
     '<b>Customer service agents:</b> Contributed to AliExpress pre-sales and after-sales agents, including planner-reasoner architectures, tool calling, reward evaluation, and alignment with DPO and GRPO.',
@@ -121,12 +120,11 @@ for text in [
 section('Internship Experience')
 entry('Alibaba International', 'Dec 2023 - Feb 2024', 'Research Intern',
     'Explored RLHF and DPO for customer service language models, reinforcement learning frameworks, and automated model evaluation.')
-story.append(Spacer(1,7))
+story.append(Spacer(1,3))
 entry('Tencent AI Lab', 'May 2023 - Oct 2023', 'Research Intern',
     'Worked on LLM role-playing, game commentary, and report generation. Participated in research on PPO-based methods for extending model input context.')
 
 # Let publication entries flow into the remaining first-page space.
-section('Publications')
 publications = [
     ('Turn-level Multiscale Density Ratio Estimation for LLM Agents',
      'Zishuo Zhao, Kai Chen, Ao Li, Yuan Liu', 'arXiv:2609.16760, 2026', 'https://arxiv.org/abs/2609.16760'),
@@ -153,8 +151,11 @@ def paper(item, number):
     title = escape(title)
     if url:
         title = f'<link href="{escape(url)}" color="{LINK}">{title}</link>'
-    # Keep each citation intact across page breaks.
-    story.append(KeepTogether([para(f'[{number}] {authors}.<br/>{title}.<br/><i>{escape(venue)}.</i>', 'pub')]))
+    # Keep the section heading with its first citation, and each citation intact.
+    elements = [para(f'[{number}] {authors}.<br/>{title}.<br/><i>{escape(venue)}.</i>', 'pub')]
+    if number == 1:
+        elements.insert(0, Section('Publications'))
+    story.append(KeepTogether(elements))
 for i, item in enumerate(publications, 1):
     paper(item, i)
 section('Technical Skills')
