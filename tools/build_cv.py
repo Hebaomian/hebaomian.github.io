@@ -97,15 +97,6 @@ contact = Table([[para('Alibaba Group Holding Limited<br/>Hangzhou, China', 'con
 contact.setStyle(TableStyle([('VALIGN',(0,0),(-1,-1),'TOP'),('LEFTPADDING',(0,0),(-1,-1),0),('RIGHTPADDING',(0,0),(-1,-1),0),('TOPPADDING',(0,0),(-1,-1),0),('BOTTOMPADDING',(0,0),(-1,-1),0)]))
 story.append(contact)
 
-section('Research Interests')
-add('My research focuses on <b>large language model agents and reinforcement learning</b>, particularly learning from multi-turn interactions, preference alignment, reasoning, and tool use.')
-for text in [
-    '<b>Agentic reinforcement learning:</b> Multi-turn preference learning, turn-level credit assignment, and alignment for LLM agents.',
-    '<b>Natural language processing:</b> Source-free domain adaptation for question answering and aspect-based sentiment analysis.',
-    '<b>Multimodal learning:</b> Cross-modal retrieval, multimodal graph learning, and vision-language applications.',
-]:
-    add('• '+text, 'bullet')
-
 section('Education')
 entry('Sun Yat-sen University', 'Sep 2021 - Jun 2024',
       "Master's degree in Intelligent Control", 'School of Intelligent Systems Engineering, Shenzhen, China')
@@ -171,6 +162,16 @@ section('Technical Skills')
 add('<b>Programming and frameworks:</b> Python, verl.<br/>'
     '<b>Methods:</b> DPO, GRPO, RLHF, LLM agent development, and multimodal learning.<br/>'
     '<b>Languages:</b> English (CET-6, CET-4).')
+
+section('Research Interests')
+add('My research focuses on <b>large language model agents and reinforcement learning</b>, particularly learning from multi-turn interactions, preference alignment, reasoning, and tool use.')
+for text in [
+    '<b>Agentic reinforcement learning:</b> Multi-turn preference learning, turn-level credit assignment, and alignment for LLM agents.',
+    '<b>Natural language processing:</b> Source-free domain adaptation for question answering and aspect-based sentiment analysis.',
+    '<b>Multimodal learning:</b> Cross-modal retrieval, multimodal graph learning, and vision-language applications.',
+]:
+    add('• '+text, 'bullet')
+
 
 def footer(canvas, doc):
     canvas.setFillColor(GRAY)
