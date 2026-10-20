@@ -106,9 +106,9 @@ entry('Sun Yat-sen University', 'Sep 2017 - Jun 2021',
 section('Work Experience')
 entry('Alibaba Holding', 'Aug 3, 2026 - Present', 'Large Language Model Algorithm Engineer', title_style='company')
 for text in [
-    '<i>Code Agent Data Synthesis:</i> Develop synthetic training data for code agents, focusing on Terminal-Bench 3.0, machine learning, and scientific tasks. Work on task-oriented data and agent interaction trajectories to support coding, experimentation, and problem solving across these domains.',
-    '<i>Multimodal Agent Training:</i> Train multimodal models as agents, covering reflection, OPD, tool calling, and revisiting prior observations. Work on reinforcement learning for multimodal agent tasks that combine perception, reasoning, and interaction across multiple steps.',
-    "<i>Research on Agent Learning:</i> Investigate Claude's reasoning trajectories through probing and reverse engineering. Explore knowledge distillation, OPD, RSI-based self-improvement, and agentic reinforcement learning, with a focus on reasoning transfer and iterative agent improvement.",
+    '<i>Code Agent Data Synthesis:</i> Generate synthetic training data for code agents across Terminal-Bench 3.0, machine learning, and scientific problem-solving tasks.',
+    '<i>Multimodal Agent Training:</i> Train multimodal agents with reflection, OPD, tool calling, revisiting prior observations, and reinforcement learning.',
+    "<i>Research on Agent Learning:</i> Study Claude's reasoning trajectories through probing and reverse engineering; explore distillation, OPD, RSI, and agentic reinforcement learning.",
 ]:
     add('• '+text, 'work')
 story.append(Spacer(1,3))
