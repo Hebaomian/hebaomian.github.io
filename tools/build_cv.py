@@ -90,9 +90,9 @@ def entry(title, dates, detail=None, body=None, title_style='entry'):
 
 add('Zishuo Zhao', 'name')
 contact = Table([[para('Hangzhou, China<br/>'+link('+86 17635859833','tel:+8617635859833'), 'contact'),
-    para(link('zhaozsh@alumni.sysu.edu.cn','mailto:zhaozsh@alumni.sysu.edu.cn')+'<br/>'+link('hebaomian.github.io','https://hebaomian.github.io/'), 'right')],
+    para(link('zhaozsh@alumni.sysu.edu.cn','mailto:zhaozsh@alumni.sysu.edu.cn')+'<br/>'+link('zishuo-zhao.github.io','https://zishuo-zhao.github.io/'), 'right')],
     [para('LLM Agents &amp; Reinforcement Learning', 'contact'),
-    para(link('Google Scholar','https://scholar.google.com/citations?user=PjFPF9MAAAAJ&hl=en')+' &nbsp; | &nbsp; '+link('GitHub','https://github.com/Hebaomian'), 'right')]], colWidths=[WIDTH/2]*2)
+    para(link('Google Scholar','https://scholar.google.com/citations?user=PjFPF9MAAAAJ&hl=en')+' &nbsp; | &nbsp; '+link('GitHub','https://github.com/Zishuo-Zhao'), 'right')]], colWidths=[WIDTH/2]*2)
 contact.setStyle(TableStyle([('VALIGN',(0,0),(-1,-1),'TOP'),('LEFTPADDING',(0,0),(-1,-1),0),('RIGHTPADDING',(0,0),(-1,-1),0),('TOPPADDING',(0,0),(-1,-1),0),('BOTTOMPADDING',(0,0),(-1,-1),0)]))
 story.append(contact)
 

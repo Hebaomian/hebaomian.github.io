@@ -25,9 +25,9 @@ Then open `http://127.0.0.1:4173`.
 
 ## GitHub Pages
 
-Use a repository named `Hebaomian.github.io`. Upload the files in this directory to the repository root. In **Settings → Pages**, select **Deploy from a branch**, **main**, and **/(root)**.
+Use a repository named `zishuo-zhao.github.io`. Upload the files in this directory to the repository root. In **Settings → Pages**, select **Deploy from a branch**, **main**, and **/(root)**.
 
-The live address is `https://hebaomian.github.io/`. Changes to `main` are published by GitHub Pages.
+The live address is `https://zishuo-zhao.github.io/`. Changes to `main` are published by GitHub Pages.
 
 ## Updating content
 
