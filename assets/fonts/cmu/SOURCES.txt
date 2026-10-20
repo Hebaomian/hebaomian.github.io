@@ -1,0 +1,23 @@
+Computer Modern Unicode serif fonts
+
+Original project: https://cm-unicode.sourceforge.io/
+Original author: Andrey V. Panov; original Computer Modern designs by Donald Knuth and other contributors named in OFL.txt.
+Web font package: Christian Perfect, https://checkmyworking.com/cm-web-fonts/
+Distribution mirror: https://github.com/dominictarr/computer-modern/tree/master/serif
+Downloaded without modification on 2026-10-20 from:
+https://cdn.jsdelivr.net/gh/dominictarr/computer-modern@master/serif/
+
+Files:
+cmunrm.ttf  CMU Serif Roman
+cmunbx.ttf  CMU Serif Bold
+cmunti.ttf  CMU Serif Italic
+cmunbi.ttf  CMU Serif Bold Italic
+
+License: SIL Open Font License 1.1, reproduced in OFL.txt.
+README.txt is the original distribution's attribution note.
+
+SHA-256:
+3deb3c529a46d391eaad2e2b896824013d4e1922419c91ab6cb75c40db97c3f2  cmunrm.ttf
+643afcc8fc9a526cd060f37459f050f03156f0a593779d87b8ad21f937757a31  cmunbx.ttf
+acd86b2806441b277361e1dfe2d64c26038ba727c6e69fbdfff6ddb8f6446478  cmunti.ttf
+570dbbba9377d7d2fbdf544ae0dfd751614d90446a6229e7cf4b6a4cf97349ab  cmunbi.ttf

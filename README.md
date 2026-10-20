@@ -9,7 +9,8 @@ An English academic homepage for Zishuo Zhao, built with plain HTML, CSS, and Ja
 - `site.js`: publication filters, expandable summaries and citations, and mobile navigation.
 - `style.css`: responsive layout, accessibility states, and print styles.
 - `assets/CV.pdf`: public English CV. The original private resume is not included.
-- `tools/build_cv.py`: generates the public English CV with ReportLab.
+- `tools/build_cv.py`: generates the public English CV with ReportLab and embedded CMU Serif fonts.
+- `assets/fonts/cmu/`: Computer Modern Unicode font files, OFL license, and provenance.
 - `.nojekyll`: serves the files directly through GitHub Pages.
 
 ## Local preview
@@ -26,7 +27,7 @@ Then open `http://127.0.0.1:4173`.
 
 Use a repository named `Hebaomian.github.io`. Upload the files in this directory to the repository root. In **Settings → Pages**, select **Deploy from a branch**, **main**, and **/(root)**.
 
-The intended address is `https://hebaomian.github.io/`. It becomes available after the Pages deployment succeeds.
+The live address is `https://hebaomian.github.io/`. Changes to `main` are published by GitHub Pages.
 
 ## Updating content
 
@@ -39,3 +40,7 @@ python3 tools/build_cv.py
 ```
 
 The public version omits the personal phone number and internal business scenario identifiers. The academic contact email comes from the supplied resume.
+
+## Typography
+
+The homepage follows the reference site's Gill Sans body type (16px, 1.6 line height), system sans headings, and centered layout. Gill Sans is used when installed; Gill Sans MT, Calibri, and the browser sans-serif provide fallbacks. No proprietary font is redistributed. The CV uses embedded CMU Serif, a Computer Modern Unicode family released under OFL 1.1, with black section rules and right-aligned dates.
