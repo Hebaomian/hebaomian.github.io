@@ -15,9 +15,9 @@
       <p class="paper-venue">${escape(paper.venue)}</p>
       <div class="paper-links">
         <a href="${escape(paper.url)}" target="_blank" rel="noopener">${paper.searchLink ? "FIND PAPER" : paper.group === "Preprints" ? "ARXIV" : "PAPER"} ↗</a>
-        ${paper.pdf ? `<a href="${escape(paper.pdf)}" target="_blank" rel="noopener">PDF ↗</a>` : ""}
-        <button data-disclosure="${paper.id}-summary" aria-expanded="false" aria-controls="${paper.id}-summary">${paper.abstract ? "ABSTRACT" : "OVERVIEW"}</button>
-        <button data-disclosure="${paper.id}-bib" aria-expanded="false" aria-controls="${paper.id}-bib">BIBTEX</button>
+        ${paper.pdf ? `<a class="paper-link-pdf" href="${escape(paper.pdf)}" target="_blank" rel="noopener">PDF ↗</a>` : ""}
+        <button class="paper-link-summary" data-disclosure="${paper.id}-summary" aria-expanded="false" aria-controls="${paper.id}-summary">${paper.abstract ? "ABSTRACT" : "OVERVIEW"}</button>
+        <button class="paper-link-bib" data-disclosure="${paper.id}-bib" aria-expanded="false" aria-controls="${paper.id}-bib">BIBTEX</button>
       </div>
       <div class="paper-details" id="${paper.id}-summary" hidden><p>${escape(paper.abstract || paper.summary)}</p></div>
       <div class="paper-details bibtex-wrap" id="${paper.id}-bib" hidden><button class="copy-bib" data-copy="${paper.id}" aria-label="Copy citation for ${escape(paper.title)}">Copy citation</button><pre>${escape(paper.bibtex)}</pre></div>
