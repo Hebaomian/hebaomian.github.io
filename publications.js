@@ -31,9 +31,9 @@ window.PUBLICATIONS = [
     title: "Source-Free Unsupervised Domain Adaptation for Question Answering",
     authors: ["Zishuo Zhao", "Yuexiang Xie", "Jingyou Xie", "Zhenzhou Lin", "Yaliang Li", "Ying Shen"],
     venue: "IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2023",
-    url: "https://scholar.google.com/scholar?q=%22Source-Free+Unsupervised+Domain+Adaptation+for+Question+Answering%22", searchLink: true,
+    url: "https://ieeexplore.ieee.org/abstract/document/10095248",
     summary: "Research on adapting question answering models to target domains without access to source-domain training data.",
-    bibtex: "@inproceedings{zhao2023sourcefree,\n  title = {Source-Free Unsupervised Domain Adaptation for Question Answering},\n  author = {Zishuo Zhao and Yuexiang Xie and Jingyou Xie and Zhenzhou Lin and Yaliang Li and Ying Shen},\n  booktitle = {ICASSP 2023 - 2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},\n  year = {2023},\n  pages = {1--5}\n}"
+    bibtex: "@inproceedings{zhao2023sourcefree,\n  title = {Source-Free Unsupervised Domain Adaptation for Question Answering},\n  author = {Zishuo Zhao and Yuexiang Xie and Jingyou Xie and Zhenzhou Lin and Yaliang Li and Ying Shen},\n  booktitle = {ICASSP 2023 - 2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},\n  year = {2023},\n  pages = {1--5},\n  url = {https://ieeexplore.ieee.org/abstract/document/10095248}\n}"
   },
   {
     id: "htens", group: "Conference Papers", topic: "knowledge", year: 2023, badge: "SIGIR '23", visual: "HTENS",

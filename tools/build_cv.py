@@ -141,7 +141,7 @@ publications = [
      'ACM SIGIR 2023, pp. 2047-2051', 'https://doi.org/10.1145/3539618.3591996'),
     ('Source-Free Unsupervised Domain Adaptation for Question Answering',
      'Zishuo Zhao, Yuexiang Xie, Jingyou Xie, Zhenzhou Lin, Yaliang Li, Ying Shen',
-     'IEEE ICASSP 2023, pp. 1-5', None),
+     'IEEE ICASSP 2023, pp. 1-5', 'https://ieeexplore.ieee.org/abstract/document/10095248'),
     ('Multimodal Graph Learning for Cross-Modal Retrieval',
      'Jingyou Xie, Zishuo Zhao, Zhenzhou Lin, Ying Shen',
      'SIAM SDM 2023, pp. 145-153', 'https://doi.org/10.1137/1.9781611977653.ch17'),
