@@ -39,7 +39,7 @@ To regenerate the CV with ReportLab installed:
 python3 tools/build_cv.py
 ```
 
-The public version omits the personal phone number and internal business scenario identifiers. The academic contact email comes from the supplied resume.
+The public CV includes contact details supplied by its owner and omits internal business scenario identifiers. Publications are listed in reverse chronological order, and Research Interests appears at the end.
 
 ## Typography
 

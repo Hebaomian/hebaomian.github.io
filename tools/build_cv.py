@@ -9,7 +9,7 @@ from reportlab.lib.styles import ParagraphStyle
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.platypus import (
-    SimpleDocTemplate, Paragraph, Spacer, PageBreak, KeepTogether, Table,
+    SimpleDocTemplate, Paragraph, Spacer, KeepTogether, Table,
     TableStyle, Flowable,
 )
 
@@ -29,8 +29,7 @@ WIDTH = PAGE_W - 2 * MARGIN
 BASE = dict(fontName='CMU', fontSize=10.9, leading=13.6, textColor=INK)
 styles = {
     'body': ParagraphStyle('body', **BASE, spaceAfter=5),
-    'name': ParagraphStyle('name', fontName='CMU-Bold', fontSize=16, leading=20, alignment=TA_CENTER, spaceAfter=4),
-    'subtitle': ParagraphStyle('subtitle', **BASE, alignment=TA_CENTER, spaceAfter=10),
+    'name': ParagraphStyle('name', fontName='CMU-Bold', fontSize=16, leading=20, alignment=TA_CENTER, spaceAfter=11),
     'contact': ParagraphStyle('contact', **(BASE | dict(fontSize=9.9, leading=13.3))),
     'right': ParagraphStyle('right', **(BASE | dict(fontSize=9.9, leading=13.3)), alignment=TA_RIGHT),
     'detail': ParagraphStyle('detail', fontName='CMU-Italic', fontSize=9.6, leading=12.6, textColor=INK, spaceAfter=3),
@@ -38,7 +37,6 @@ styles = {
     'entry': ParagraphStyle('entry', **(BASE | dict(fontName='CMU-Bold'))),
     'bullet': ParagraphStyle('bullet', **BASE, leftIndent=10, firstLineIndent=-10, spaceAfter=5),
     'pub': ParagraphStyle('pub', **BASE, leftIndent=16, firstLineIndent=-16, spaceAfter=12),
-    'subhead': ParagraphStyle('subhead', fontName='CMU-Italic', fontSize=10.5, leading=14, textColor=GRAY, spaceAfter=7, spaceBefore=4),
 }
 
 def para(text, style='body'):
@@ -89,8 +87,7 @@ def entry(title, dates, detail=None, body=None):
     story.append(KeepTogether(elements))
 
 add('Zishuo Zhao', 'name')
-add('Alibaba Holding', 'subtitle')
-contact = Table([[para('Alibaba Group Holding Limited<br/>Hangzhou, China', 'contact'),
+contact = Table([[para('Hangzhou, China<br/>'+link('+86 17635859833','tel:+8617635859833'), 'contact'),
     para(link('zhaozsh@alumni.sysu.edu.cn','mailto:zhaozsh@alumni.sysu.edu.cn')+'<br/>'+link('hebaomian.github.io','https://hebaomian.github.io/'), 'right')],
     [para('LLM Agents &amp; Reinforcement Learning', 'contact'),
     para(link('Google Scholar','https://scholar.google.com/citations?user=PjFPF9MAAAAJ&hl=en')+' &nbsp; | &nbsp; '+link('GitHub','https://github.com/Hebaomian'), 'right')]], colWidths=[WIDTH/2]*2)
@@ -121,26 +118,23 @@ story.append(Spacer(1,7))
 entry('Tencent AI Lab', 'May 2023 - Oct 2023', 'Research Intern',
     'Worked on LLM role-playing, game commentary, and report generation. Participated in research on PPO-based methods for extending model input context.')
 
-story.append(PageBreak())
+# Let publication entries flow into the remaining first-page space.
 section('Publications')
-add('Preprints', 'subhead')
 publications = [
     ('Turn-level Multiscale Density Ratio Estimation for LLM Agents',
      'Zishuo Zhao, Kai Chen, Ao Li, Yuan Liu', 'arXiv:2609.16760, 2026', 'https://arxiv.org/abs/2609.16760'),
     ('FLEX-CLIP: Feature-Level GEneration Network Enhanced CLIP for X-shot Cross-modal Retrieval',
      'Jingyou Xie, Jiayi Kuang, Zhenzhou Lin, Jiarui Ouyang, Zishuo Zhao, Ying Shen',
      'arXiv:2411.17454, 2024', 'https://arxiv.org/abs/2411.17454'),
-]
-conference = [
     ('Source-free Domain Adaptation for Aspect-based Sentiment Analysis',
      'Zishuo Zhao, Ziyang Ma, Zhenzhou Lin, Jingyou Xie, Yinghui Li, Ying Shen',
      'LREC-COLING 2024, pp. 15076-15086', 'https://aclanthology.org/2024.lrec-main.1310/'),
-    ('Source-Free Unsupervised Domain Adaptation for Question Answering',
-     'Zishuo Zhao, Yuexiang Xie, Jingyou Xie, Zhenzhou Lin, Yaliang Li, Ying Shen',
-     'IEEE ICASSP 2023, pp. 1-5', None),
     ('Hierarchical Type Enhanced Negative Sampling for Knowledge Graph Embedding',
      'Zhenzhou Lin, Zishuo Zhao, Jingyou Xie, Ying Shen',
      'ACM SIGIR 2023, pp. 2047-2051', 'https://doi.org/10.1145/3539618.3591996'),
+    ('Source-Free Unsupervised Domain Adaptation for Question Answering',
+     'Zishuo Zhao, Yuexiang Xie, Jingyou Xie, Zhenzhou Lin, Yaliang Li, Ying Shen',
+     'IEEE ICASSP 2023, pp. 1-5', None),
     ('Multimodal Graph Learning for Cross-Modal Retrieval',
      'Jingyou Xie, Zishuo Zhao, Zhenzhou Lin, Ying Shen',
      'SIAM SDM 2023, pp. 145-153', 'https://doi.org/10.1137/1.9781611977653.ch17'),
@@ -152,11 +146,9 @@ def paper(item, number):
     title = escape(title)
     if url:
         title = f'<link href="{escape(url)}" color="{LINK}">{title}</link>'
-    add(f'[{number}] {authors}.<br/>{title}.<br/><i>{escape(venue)}.</i>', 'pub')
+    # Keep each citation intact across page breaks.
+    story.append(KeepTogether([para(f'[{number}] {authors}.<br/>{title}.<br/><i>{escape(venue)}.</i>', 'pub')]))
 for i, item in enumerate(publications, 1):
-    paper(item, i)
-add('Conference Papers', 'subhead')
-for i, item in enumerate(conference, 3):
     paper(item, i)
 section('Technical Skills')
 add('<b>Programming and frameworks:</b> Python, verl.<br/>'
