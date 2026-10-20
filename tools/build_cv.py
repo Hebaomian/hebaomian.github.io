@@ -35,7 +35,9 @@ styles = {
     'detail': ParagraphStyle('detail', fontName='CMU-Italic', fontSize=9.6, leading=12.6, textColor=INK, spaceAfter=3),
     'date': ParagraphStyle('date', fontName='CMU-Italic', fontSize=9.4, leading=13.6, alignment=TA_RIGHT, textColor=INK),
     'entry': ParagraphStyle('entry', **(BASE | dict(fontName='CMU-Bold'))),
+    'company': ParagraphStyle('company', fontName='CMU-Bold', fontSize=12.4, leading=14.6, textColor=INK),
     'bullet': ParagraphStyle('bullet', **BASE, leftIndent=10, firstLineIndent=-10, spaceAfter=5),
+    'work': ParagraphStyle('work', **BASE, leftIndent=12, firstLineIndent=-8, spaceAfter=5),
     'pub': ParagraphStyle('pub', **(BASE | dict(leading=13.1)), leftIndent=16, firstLineIndent=-16, spaceAfter=5),
 }
 
@@ -75,8 +77,8 @@ def add(text, style='body'):
     story.append(para(text, style))
 def section(title):
     story.append(Section(title))
-def entry(title, dates, detail=None, body=None):
-    table = Table([[para(title, 'entry'), para(dates, 'date')]], colWidths=[WIDTH-155,155])
+def entry(title, dates, detail=None, body=None, title_style='entry'):
+    table = Table([[para(title, title_style), para(dates, 'date')]], colWidths=[WIDTH-155,155])
     table.setStyle(TableStyle([('VALIGN',(0,0),(-1,-1),'TOP'), ('LEFTPADDING',(0,0),(-1,-1),0),
         ('RIGHTPADDING',(0,0),(-1,-1),0), ('TOPPADDING',(0,0),(-1,-1),0), ('BOTTOMPADDING',(0,0),(-1,-1),2)]))
     elements = [table]
@@ -102,27 +104,27 @@ entry('Sun Yat-sen University', 'Sep 2017 - Jun 2021',
       "Bachelor's degree in Computational Materials", 'School of Materials, Guangzhou, China')
 
 section('Work Experience')
-entry('Alibaba Holding', 'Aug 3, 2026 - Present', 'Large Language Model Algorithm Engineer')
+entry('Alibaba Holding', 'Aug 3, 2026 - Present', 'Large Language Model Algorithm Engineer', title_style='company')
 for text in [
-    '<b>Code Agent Data Synthesis:</b> Develop synthetic training data for code agents, focusing on Terminal-Bench 3.0, machine learning, and scientific tasks. Work on task-oriented data and agent interaction trajectories to support coding, experimentation, and problem solving across these domains.',
-    '<b>Multimodal Agent Training:</b> Train multimodal models as agents, covering reflection, OPD, tool calling, and revisiting prior observations. Work on reinforcement learning for multimodal agent tasks that combine perception, reasoning, and interaction across multiple steps.',
-    "<b>Research on Agent Learning:</b> Investigate Claude's reasoning trajectories through probing and reverse engineering. Explore knowledge distillation, OPD, RSI-based self-improvement, and agentic reinforcement learning, with a focus on reasoning transfer and iterative agent improvement.",
+    '<i>Code Agent Data Synthesis:</i> Develop synthetic training data for code agents, focusing on Terminal-Bench 3.0, machine learning, and scientific tasks. Work on task-oriented data and agent interaction trajectories to support coding, experimentation, and problem solving across these domains.',
+    '<i>Multimodal Agent Training:</i> Train multimodal models as agents, covering reflection, OPD, tool calling, and revisiting prior observations. Work on reinforcement learning for multimodal agent tasks that combine perception, reasoning, and interaction across multiple steps.',
+    "<i>Research on Agent Learning:</i> Investigate Claude's reasoning trajectories through probing and reverse engineering. Explore knowledge distillation, OPD, RSI-based self-improvement, and agentic reinforcement learning, with a focus on reasoning transfer and iterative agent improvement.",
 ]:
-    add('• '+text, 'bullet')
+    add('• '+text, 'work')
 story.append(Spacer(1,3))
-entry('Alibaba International', 'Jul 2024 - Jul 3, 2026', 'Large Language Model Algorithm Engineer')
+entry('Alibaba International', 'Jul 2024 - Jul 3, 2026', 'Large Language Model Algorithm Engineer', title_style='company')
 for text in [
-    '<b>Customer service agents:</b> Contributed to AliExpress pre-sales and after-sales agents, including planner-reasoner architectures, tool calling, reward evaluation, and alignment with DPO and GRPO.',
-    '<b>Multimodal review:</b> Worked on image-based review with multimodal models, OCR, image classification, and preference alignment.',
-    '<b>Voice agents:</b> Worked on Lazada inbound and ICBU outbound voice agents, covering planning, knowledge grounding, interruption handling, and order understanding.',
+    '<i>Customer service agents:</i> Contributed to AliExpress pre-sales and after-sales agents, including planner-reasoner architectures, tool calling, reward evaluation, and alignment with DPO and GRPO.',
+    '<i>Multimodal review:</i> Worked on image-based review with multimodal models, OCR, image classification, and preference alignment.',
+    '<i>Voice agents:</i> Worked on Lazada inbound and ICBU outbound voice agents, covering planning, knowledge grounding, interruption handling, and order understanding.',
 ]:
-    add('• '+text, 'bullet')
+    add('• '+text, 'work')
 section('Internship Experience')
 entry('Alibaba International', 'Dec 2023 - Feb 2024', 'Research Intern',
-    'Explored RLHF and DPO for customer service language models, reinforcement learning frameworks, and automated model evaluation.')
+    'Explored RLHF and DPO for customer service language models, reinforcement learning frameworks, and automated model evaluation.', title_style='company')
 story.append(Spacer(1,3))
 entry('Tencent AI Lab', 'May 2023 - Oct 2023', 'Research Intern',
-    'Worked on LLM role-playing, game commentary, and report generation. Participated in research on PPO-based methods for extending model input context.')
+    'Worked on LLM role-playing, game commentary, and report generation. Participated in research on PPO-based methods for extending model input context.', title_style='company')
 
 # Let publication entries flow into the remaining first-page space.
 publications = [

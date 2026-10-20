@@ -104,12 +104,13 @@ main{padding:24px 49px 0}
 .copy-bib{position:absolute;right:8px;top:8px;font-size:10px;cursor:pointer;background:white;color:var(--accent);border:1px solid #d6c9df;border-radius:3px;padding:2px 7px}
 .experience-entry{padding:12px 0 23px;border-bottom:1px solid var(--line)}
 .entry-heading{display:flex;justify-content:space-between;gap:18px;align-items:baseline;margin-bottom:11px}
-.entry-heading h3,.education-entry h3{font-size:18px;font-weight:600}
+.entry-heading h3{font-size:21px;font-weight:600}
+.education-entry h3{font-size:18px;font-weight:600}
 .entry-role{font-size:13px;color:var(--accent);margin-top:3px}
 .entry-heading time,.education-entry time{font-size:13px;color:#8a8092;white-space:nowrap}
 .experience-entry>p{font-size:16px;color:#655e6c;line-height:1.75}
-.project-list{display:grid;grid-template-columns:1fr;gap:13px;margin-top:18px;padding-left:17px;border-left:2px solid #ded2e7}
-.project-list h4{font-size:16px;font-weight:600}
+.project-list{display:grid;grid-template-columns:1fr;gap:15px;margin-top:18px;padding-left:17px;border-left:2px solid #ded2e7}
+.project-list h4{font-size:16px;font-weight:400;font-style:italic;color:#5e5964}
 .project-list p{font-size:15px;line-height:1.7;color:#776e7f;margin-top:3px}
 .compact-entry{padding-top:22px}
 .education-entry{display:grid;grid-template-columns:43px 1fr auto;gap:15px;padding:18px 0;border-bottom:1px solid var(--line);align-items:start}
@@ -204,7 +205,8 @@ h2{font-size:23px}
 .publication h4{font-size:17px}
 .authors,.paper-venue{font-size:14px}
 .entry-heading{align-items:start;gap:11px}
-.entry-heading h3,.education-entry h3{font-size:16px}
+.entry-heading h3{font-size:19px}
+.education-entry h3{font-size:16px}
 .entry-heading time{font-size:12px;padding-top:4px;white-space:normal;text-align:right;max-width:128px;flex-shrink:0}
 .entry-role{font-size:11px}
 .experience-entry>p{font-size:16px}
