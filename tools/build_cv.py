@@ -36,7 +36,7 @@ styles = {
     'date': ParagraphStyle('date', fontName='CMU-Italic', fontSize=9.4, leading=13.6, alignment=TA_RIGHT, textColor=INK),
     'entry': ParagraphStyle('entry', **(BASE | dict(fontName='CMU-Bold'))),
     'bullet': ParagraphStyle('bullet', **BASE, leftIndent=10, firstLineIndent=-10, spaceAfter=5),
-    'pub': ParagraphStyle('pub', **BASE, leftIndent=16, firstLineIndent=-16, spaceAfter=12),
+    'pub': ParagraphStyle('pub', **(BASE | dict(leading=13.1)), leftIndent=16, firstLineIndent=-16, spaceAfter=5),
 }
 
 def para(text, style='body'):
@@ -101,7 +101,7 @@ story.append(Spacer(1,3))
 entry('Sun Yat-sen University', 'Sep 2017 - Jun 2021',
       "Bachelor's degree in Computational Materials", 'School of Materials, Guangzhou, China')
 
-section('Professional Experience')
+section('Work Experience')
 entry('Alibaba Holding', 'Aug 3, 2026 - Present', 'Alibaba Group Holding Limited')
 story.append(Spacer(1,7))
 entry('Alibaba International', 'Jul 2024 - Jul 3, 2026', 'LLM Agents &amp; Reinforcement Learning')
@@ -111,7 +111,7 @@ for text in [
     '<b>Voice agents:</b> Worked on Lazada inbound and ICBU outbound voice agents, covering planning, knowledge grounding, interruption handling, and order understanding.',
 ]:
     add('• '+text, 'bullet')
-story.append(Spacer(1,7))
+section('Internship Experience')
 entry('Alibaba International', 'Dec 2023 - Feb 2024', 'Research Intern',
     'Explored RLHF and DPO for customer service language models, reinforcement learning frameworks, and automated model evaluation.')
 story.append(Spacer(1,7))
