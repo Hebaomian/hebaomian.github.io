@@ -54,8 +54,9 @@ main{padding:24px 49px 0}
 .profile-education{border-top:1px solid #e4deeb;padding-top:17px;text-align:left}
 .profile-education p{font-size:13px;line-height:1.6;padding-left:35px;position:relative;margin-bottom:13px}
 .profile-education p:last-child{margin-bottom:0}
-.profile-education p>span{position:absolute;left:0;top:0;color:#6c597f;font-size:10px;font-weight:700}
-.profile-education small{font-size:11px;color:#807786}
+.profile-education p>span{position:absolute;left:0;top:0;color:#847a8d;font-size:10px;font-weight:400}
+.profile-education strong{display:block;font-weight:600;color:#444;line-height:1.45}
+.profile-education small{display:block;font-size:11px;color:#807786;line-height:1.5;margin-top:3px}
 .news{margin-top:27px}
 .news h2{font-size:20px;margin-bottom:14px}
 .news article{border-top:1px solid var(--line);padding:12px 0}
@@ -176,8 +177,8 @@ main{padding:25px 23px 0}
 .social-links{gap:6px;margin:13px 0 17px}
 .social-links a{width:26px;height:26px}
 .social-links svg{width:17px;height:17px}
-.profile-education p{font-size:10px;padding-left:30px}
-.profile-education small{font-size:9px}
+.profile-education p{font-size:12px;padding-left:30px}
+.profile-education small{font-size:10px}
 .profile-education p>span{font-size:9px}
 .news{margin-top:3px}
 .news h2{font-size:19px}

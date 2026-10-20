@@ -35,7 +35,7 @@ styles = {
     'detail': ParagraphStyle('detail', fontName='CMU-Italic', fontSize=9.6, leading=12.6, textColor=INK, spaceAfter=3),
     'date': ParagraphStyle('date', fontName='CMU-Italic', fontSize=9.4, leading=13.6, alignment=TA_RIGHT, textColor=INK),
     'entry': ParagraphStyle('entry', **(BASE | dict(fontName='CMU-Bold'))),
-    'company': ParagraphStyle('company', fontName='CMU-Bold', fontSize=12.4, leading=14.6, textColor=INK),
+    'company': ParagraphStyle('company', fontName='CMU-Bold', fontSize=10.9, leading=13.6, textColor=INK),
     'bullet': ParagraphStyle('bullet', **BASE, leftIndent=10, firstLineIndent=-10, spaceAfter=5),
     'work': ParagraphStyle('work', **BASE, leftIndent=12, firstLineIndent=-8, spaceAfter=5),
     'pub': ParagraphStyle('pub', **(BASE | dict(leading=13.1)), leftIndent=16, firstLineIndent=-16, spaceAfter=5),
@@ -112,7 +112,7 @@ for text in [
 ]:
     add('• '+text, 'work')
 story.append(Spacer(1,3))
-entry('Alibaba International', 'Jul 2024 - Jul 3, 2026', 'Large Language Model Algorithm Engineer', title_style='company')
+entry('Alibaba International', 'Jul 4, 2024 - Jul 3, 2026', 'Large Language Model Algorithm Engineer', title_style='company')
 for text in [
     '<i>Customer service agents:</i> Contributed to AliExpress pre-sales and after-sales agents, including planner-reasoner architectures, tool calling, reward evaluation, and alignment with DPO and GRPO.',
     '<i>Multimodal review:</i> Worked on image-based review with multimodal models, OCR, image classification, and preference alignment.',
