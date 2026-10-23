@@ -120,11 +120,13 @@ for text in [
 ]:
     add('• '+text, 'work')
 section('Internship Experience')
-entry('Alibaba International', 'Dec 2023 - Feb 2024', 'Research Intern',
-    'Explored RLHF and DPO for customer service language models, reinforcement learning frameworks, and automated model evaluation.', title_style='company')
+entry('Alibaba International <font name="CMU-Italic" size="9.6"> | Research Intern</font>',
+    'Dec 2023 - Feb 2024',
+    body='RLHF/DPO and automated evaluation for customer service LLMs.', title_style='company')
 story.append(Spacer(1,3))
-entry('Tencent AI Lab', 'May 2023 - Oct 2023', 'Research Intern',
-    'Worked on LLM role-playing, game commentary, and report generation. Participated in research on PPO-based methods for extending model input context.', title_style='company')
+entry('Tencent AI Lab <font name="CMU-Italic" size="9.6"> | Research Intern</font>',
+    'May 2023 - Oct 2023',
+    body='LLM role-playing, game commentary/reporting, and PPO-based context extension.', title_style='company')
 
 # Let publication entries flow into the remaining first-page space.
 publications = [
@@ -178,7 +180,7 @@ for text in [
 def footer(canvas, doc):
     canvas.setFillColor(GRAY)
     canvas.setFont('CMU', 9)
-    canvas.drawCentredString(PAGE_W/2, 24, 'Last updated: October 20, 2026')
+    canvas.drawCentredString(PAGE_W/2, 24, 'Last updated: October 23, 2026')
     canvas.drawRightString(PAGE_W-MARGIN, 24, str(doc.page))
     if doc.page > 1:
         canvas.setFont('CMU-Italic',9)
