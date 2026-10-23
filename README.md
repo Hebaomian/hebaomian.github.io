@@ -42,7 +42,7 @@ To regenerate the CV with ReportLab installed:
 python3 tools/build_cv.py
 ```
 
-The public CV includes contact details supplied by its owner and omits internal business scenario identifiers. Publications are listed in reverse chronological order, and Research Interests appears at the end.
+The public CV includes contact details supplied by its owner and omits internal business scenario identifiers. Publications prioritize the three first-authored papers, with FLEX-CLIP listed last. Research Interests appears at the end.
 
 ## Typography
 

@@ -128,25 +128,25 @@ entry('Tencent AI Lab <font name="CMU-Italic" size="9.6"> | Research Intern</fon
     'May 2023 - Oct 2023',
     body='LLM role-playing, game commentary/reporting, and PPO-based context extension.', title_style='company')
 
-# Let publication entries flow into the remaining first-page space.
+# Prioritize first-authored papers; let citations flow into remaining page space.
 publications = [
     ('Turn-level Multiscale Density Ratio Estimation for LLM Agents',
      'Zishuo Zhao, Kai Chen, Ao Li, Yuan Liu', 'arXiv:2609.16760, 2026', 'https://arxiv.org/abs/2609.16760'),
-    ('FLEX-CLIP: Feature-Level GEneration Network Enhanced CLIP for X-shot Cross-modal Retrieval',
-     'Jingyou Xie, Jiayi Kuang, Zhenzhou Lin, Jiarui Ouyang, Zishuo Zhao, Ying Shen',
-     'arXiv:2411.17454, 2024', 'https://arxiv.org/abs/2411.17454'),
     ('Source-free Domain Adaptation for Aspect-based Sentiment Analysis',
      'Zishuo Zhao, Ziyang Ma, Zhenzhou Lin, Jingyou Xie, Yinghui Li, Ying Shen',
      'LREC-COLING 2024, pp. 15076-15086', 'https://aclanthology.org/2024.lrec-main.1310/'),
-    ('Hierarchical Type Enhanced Negative Sampling for Knowledge Graph Embedding',
-     'Zhenzhou Lin, Zishuo Zhao, Jingyou Xie, Ying Shen',
-     'ACM SIGIR 2023, pp. 2047-2051', 'https://doi.org/10.1145/3539618.3591996'),
     ('Source-Free Unsupervised Domain Adaptation for Question Answering',
      'Zishuo Zhao, Yuexiang Xie, Jingyou Xie, Zhenzhou Lin, Yaliang Li, Ying Shen',
      'IEEE ICASSP 2023, pp. 1-5', 'https://ieeexplore.ieee.org/abstract/document/10095248'),
+    ('Hierarchical Type Enhanced Negative Sampling for Knowledge Graph Embedding',
+     'Zhenzhou Lin, Zishuo Zhao, Jingyou Xie, Ying Shen',
+     'ACM SIGIR 2023, pp. 2047-2051', 'https://doi.org/10.1145/3539618.3591996'),
     ('Multimodal Graph Learning for Cross-Modal Retrieval',
      'Jingyou Xie, Zishuo Zhao, Zhenzhou Lin, Ying Shen',
      'SIAM SDM 2023, pp. 145-153', 'https://doi.org/10.1137/1.9781611977653.ch17'),
+    ('FLEX-CLIP: Feature-Level GEneration Network Enhanced CLIP for X-shot Cross-modal Retrieval',
+     'Jingyou Xie, Jiayi Kuang, Zhenzhou Lin, Jiarui Ouyang, Zishuo Zhao, Ying Shen',
+     'arXiv:2411.17454, 2024', 'https://arxiv.org/abs/2411.17454'),
 ]
 
 def paper(item, number):
